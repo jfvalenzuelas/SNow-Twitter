@@ -39,6 +39,7 @@ def writeCrawlerLog(platform, newData):
             json.dump(logData, json_file)
             json_file.close()
                         
-def crawlTwitter(api, q, since_id):
-    results = api.search(q=q, since_id=since_id, result_type="recent")
+def crawlTwitter(api, q, mode, since_id):
+    #results = api.search(q=q, since_id=since_id,tweet_mode=mode, result_type="recent")
+    results = api.search(q=q, since_id=since_id, tweet_mode=mode, result_type="recent")
     return results
