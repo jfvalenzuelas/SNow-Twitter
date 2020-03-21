@@ -41,5 +41,5 @@ def writeCrawlerLog(platform, newData):
                         
 def crawlTwitter(api, q, mode, since_id):
     #results = api.search(q=q, since_id=since_id,tweet_mode=mode, result_type="recent")
-    results = api.search(q=q, since_id=since_id, tweet_mode=mode, result_type="recent")
+    results = api.search(q=q, since_id=since_id, tweet_mode=mode, result_type="recent", count=500)
     return results
