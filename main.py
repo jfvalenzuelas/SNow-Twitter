@@ -77,7 +77,7 @@ while(True):
                 print(logText)
                 all_users = []
 
-                response = requests.post(url=snowUrl+"/tweets", auth=(snowUser, snowPwd), headers=headers, json={"system": "RPI00001", "tweets":all_tweets})
+                response = requests.post(url=snowUrl+"/tweets", auth=(snowUser, snowPwd), headers=headers, json={"system": "RPI00001", "topic": "servicenow", "tweets":all_tweets})
                 print(response)
 
                 if ("hibernating" in response.text.lower() or response.status_code != 200):
